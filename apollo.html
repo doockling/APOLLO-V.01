@@ -13,14 +13,27 @@
 <body>
   <div class="console">
     <img src="IMAGENS/console.png" alt="console">
-    <button class="console-button pkia3" onclick="location.href='pkia.html'"></button>
-    <button class="console-button joseph-bianchi" onclick="location.href='joseph-bianchi.html'"></button>
-    <button class="console-button credenciais" onclick="location.href='credenciais.html'"></button>
-    <button class="console-button pesquisador-alfa" onclick="location.href='pesquisador-alfa.html'"></button>
-    <button class="console-button credenciais2" onclick="location.href='credenciais.html'"></button>
-    <button class="console-button superiorsim" onclick="location.href='naoqueromorrer.html'"></button>
-    <button class="console-button superiornao" onclick="location.href='superiornao.html'"></button>
+    <button class="console-button pkia3" onclick="playSound('pkia.html')"></button>
+    <button class="console-button joseph-bianchi" onclick="playSound('joseph-bianchi.html')"></button>
+    <button class="console-button credenciais" onclick="playSound('credenciais.html')"></button>
+    <button class="console-button pesquisador-alfa" onclick="playSound('pesquisador-alfa.html')"></button>
+    <button class="console-button credenciais2" onclick="playSound('credenciais.html')"></button>
+    <button class="console-button superiorsim" onclick="playSound('naoqueromorrer.html')"></button>
+    <button class="console-button superiornao" onclick="playSound('superiornao.html')"></button>
   </div>
+
+<script>
+  const audio = new Audio()
+  audio.src = "IMAGENS/clique.mp3"
+  
+  function playSound(url) {
+    audio.currentTime = 0
+    audio.play()
+    setTimeout(() => {
+      location.href = url
+    }, 100)
+  }
+</script>
 
 </body>
 </html>

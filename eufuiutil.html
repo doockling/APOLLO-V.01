@@ -13,8 +13,21 @@
 <body>
     <div class="console">
     <img src="IMAGENS/APOLLO SIM.png">
-    <button class="console-button menu" onclick="location.href='apollo.html'"></button>
-    <button class="início" onclick="location.href='apollo.html'">INÍCIO</button>
+    <button class="console-button menu" onclick="playSound('apollo.html')"></button>
+    <button class="início" onclick="playSound('apollo.html')">INÍCIO</button>
   </div>
+
+<script>
+  const audio = new Audio()
+  audio.src = "IMAGENS/clique.mp3"
+  
+  function playSound(url) {
+    audio.currentTime = 0
+    audio.play()
+    setTimeout(() => {
+      location.href = url
+    }, 100)
+  }
+</script>
 </body>
 </html>

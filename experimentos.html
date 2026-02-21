@@ -13,8 +13,26 @@
 <body>
     <div class="console">
     <img src="IMAGENS/EXPERIMENTOS.png">
-    <button class="início" onclick="location.href='apollo.html'">INÍCIO</button>
-    <button class="voltar" onclick="history.back()">ANTERIOR</button>
+    <button class="início" onclick="playSound('apollo.html')">INÍCIO</button>
+    <button class="voltar" onclick="playSound('', true)">ANTERIOR</button>
   </div>
+
+<script>
+  const audio = new Audio()
+  audio.src = "IMAGENS/clique.mp3"
+  
+  function playSound(url, goBack = false) {
+    audio.currentTime = 0
+    audio.play()
+    setTimeout(() => {
+      if (goBack) {
+        history.back()
+      } else {
+        location.href = url
+      }
+    }, 100)
+  }
+</script>
+
 </body>
 </html>

@@ -13,12 +13,25 @@
 <body>
     <div class="console">
     <img src="IMAGENS/JOSEPH BIANCHI.png">
-    <button class="console-button pkia2" onclick="location.href='pkia.html'"></button>
-    <button class="console-button auxlab" onclick="location.href='auxlab.html'"></button>
-    <button class="console-button cobaiaaux" onclick="location.href='cobaiaaux.html'"></button>
-    <button class="console-button pesquisador-alfa2" onclick="location.href='pesquisador-alfa.html'"></button>
-    <button class="console-button pkia" onclick="location.href='pkia.html'"></button>
-    <button class="início" onclick="location.href='apollo.html'">INÍCIO</button>
+    <button class="console-button pkia2" onclick="playSound('pkia.html')"></button>
+    <button class="console-button auxlab" onclick="playSound('auxlab.html')"></button>
+    <button class="console-button cobaiaaux" onclick="playSound('cobaiaaux.html')"></button>
+    <button class="console-button pesquisador-alfa2" onclick="playSound('pesquisador-alfa.html')"></button>
+    <button class="console-button pkia" onclick="playSound('pkia.html')"></button>
+    <button class="início" onclick="playSound('apollo.html')">INÍCIO</button>
   </div>
+
+<script>
+  const audio = new Audio()
+  audio.src = "IMAGENS/clique.mp3"
+  
+  function playSound(url) {
+    audio.currentTime = 0
+    audio.play()
+    setTimeout(() => {
+      location.href = url
+    }, 100)
+  }
+</script>
 </body>
 </html>
