@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[TERMINAL APOLLO]</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -19,21 +19,11 @@
     <button class="console-button pesquisador-alfa" onclick="playSound('pesquisador-alfa.html')"></button>
     <button class="console-button credenciais2" onclick="playSound('credenciais.html')"></button>
     <button class="console-button superiorsim" onclick="playSound('naoqueromorrer.html')"></button>
-    <button class="console-button superiornao" onclick="playSound('superiornao.html')"></button>
+    <button class="console-button superiornao" onclick="playSound('naoqueromorrer.html')"></button>
+    <button class="console-button visualizarsim" onclick="playSound('arquivos.html')"></button>
   </div>
 
-<script>
-  const audio = new Audio()
-  audio.src = "IMAGENS/clique.mp3"
-  
-  function playSound(url) {
-    audio.currentTime = 0
-    audio.play()
-    setTimeout(() => {
-      location.href = url
-    }, 100)
-  }
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

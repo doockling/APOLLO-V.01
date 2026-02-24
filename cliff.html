@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[DR. CLIFF]</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="console">
+    <img src="IMAGENS/CLIFF/CLIFF 1.png" id="image">
+    <button class="início" onclick="playSound('apollo.html')">INÍCIO</button>
+    <button class="voltar" onclick="playSound('', true)">ANTERIOR</button>
+
+    <button class="prev" id="prev">◄</button>
+    <p class="info" id="info">1/5</p>
+    <button class="next" id="next">►</button>
+    </div>
+
+<script>
+const images = [
+  "IMAGENS/CLIFF/CLIFF 1.png",
+  "IMAGENS/CLIFF/CLIFF 2.png",
+  "IMAGENS/CLIFF/CLIFF 3.png",
+  "IMAGENS/CLIFF/CLIFF 4.png",
+  "IMAGENS/CLIFF/CLIFF 5.png",
+];
+const firstImage = 0;
+const lastImage = images.length -1;
+let currentImage = 0;
+
+// next
+const nextBtn = document.getElementById('next');
+nextBtn.addEventListener('click',()=>{
+
+        const imageTag = document.getElementById('image');
+        currentImage++; // 1
+        if(currentImage >= lastImage){
+            currentImage = 4;
+        }
+        imageTag.src = images[currentImage];
+        document.getElementById('info').innerHTML = (currentImage +1) + '/5';
+
+});
+// prev
+const preBtn = document.getElementById('prev');
+preBtn.addEventListener('click', ()=>{
+
+    const imageTag = document.getElementById('image');
+    currentImage--; // 1
+    if(currentImage <= firstImage){
+        currentImage = 0;
+    }
+    imageTag.src = images[currentImage];
+    document.getElementById('info').innerHTML = (currentImage +1) + '/5';
+
+});
+</script>
+  
+<script src="script.js"></script>
+
+</body>
+</html>
