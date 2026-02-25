@@ -11,6 +11,23 @@
   
 </head>
 <body>
+<div>
+  <style>
+    .button {
+      z-index: 1;
+      position: absolute;
+      top: 330px;
+      left: 500px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 0, 0, 0.04);
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <button class="button" onclick="window.open('https://i.imgur.com/sSn9Gnk.gif', '_blank')"></button>
+</div>
+
     <div class="console">
     <img src="IMAGENS/HIJIKATA/HIJIKA 1.png" id="image">
     <button class="início" onclick="playSound('apollo.html')">INÍCIO</button>
@@ -20,6 +37,12 @@
     <p class="info" id="info">1/6</p>
     <button class="next" id="next">►</button>
     </div>
+
+<script>
+      setTimeout(function() {
+        alert('Tá gostando do que tá vendo? :)')
+      }, 30000);
+</script>
 
 <script>
 const images = [

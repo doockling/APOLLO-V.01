@@ -11,5 +11,5 @@
       } else {
         location.href = url
       }
-    }, 100)
+    }, 200)
   }
